@@ -27,5 +27,14 @@ public class PlayerInput : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         movmentDirection = context.ReadValue<Vector2>();
-    }    
+    }
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Attack!" + context.phase);
+        }
+
+
+    }
 }
